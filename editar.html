@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <script defer src="jspersonal/all.min.js"></script>
+
+
+  <title>dashboard</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="sidebar-toggle text-light me-3">
+      <div class="toggle" onclick="toggleMenu();">
+        <span class="toggled"><i class="fas fa-bars"></i></span>
+      </div>
+
+      <a class="navbar-brand" href="index.html">Roberto</a>
+
+      <div class="collapse navbar-collapse ">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDarkDropdownMenuLink"
+              data-bs-toggle="dropdown">
+              <img class="rounded-circle" src="imagens/logo_e_corsi.png" width="20" height="20" alt="imagem">
+              &nbsp;<span class="d-none d-sm-inline">User</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Perfil</a></li>
+              <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+  <div class="d-flex bd-highlight">
+    <nav class="sidebar">
+      <ul class="list-unstyled">
+        <li> <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li>
+          <a href="#submenu1" data-bs-toggle="collapse">
+            <i class="fas fa-user"></i> Usuario
+          </a>
+          <ul class="list-unstyled collapse" id="submenu1">
+            <li><a href="listar.html"><i class="fas fa-users"></i> Usuarios</a></li>
+            <li class="active"><a href="#"><i class="fas fa-key"></i> Nivel de acesso</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#submenu2" data-bs-toggle="collapse">
+            <i class="fas fa-list-ul"></i> Menu
+          </a>
+          <ul class="list-unstyled collapse" id="submenu2">
+            <li><a href="#"><i class="fas fa-file-alt"></i> Paginas</a></li>
+            <li><a href="#"><i class="fab fa-elementor"></i> Item Menu</a></li>
+          </ul>
+        </li>
+        <li> <a href="#">Item 1</a></li>
+        <li> <a href="#">Item 2</a></li>
+        <li class="active"><a href="#">Item 3</a></li>
+        <li> <a href="#">Item 4</a></li>
+        <li> <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+      </ul>
+    </nav>
+    <div class="content p-1">
+      <div class="list-group-item">
+        <div class="d-flex">
+          <div class="me-auto p-2">
+            <h2 class="display-4 titulo">Editar Usuario</h2>
+          </div>
+
+          <div class="p-2">
+            <span class="d-none d-md-block">
+              <a href="listar.html" type="button" class="btn btn-outline-info btn-sm ">Listar
+              </a>
+              <a href="Visualizar.html" type="button" class="btn btn-outline-success btn-sm ">Vizualizar
+              </a>
+              <a href="apagar.html" type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal"
+                data-bs-target="#apagarRegistro">Apagar
+              </a>
+            </span>
+            <div class="dropdown d-block d-md-none">
+              <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Açoes
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="acoesListar">
+                <li><a class="dropdown-item" href="listar.html">Listar</a></li>
+                <li><a class="dropdown-item" href="visualizar.html">Visualizar</a></li>
+                <li><a class="dropdown-item" href="apagar.html" data-bs-toggle="modal" data-bs-target="#apagarRegistro">Apagar</a></li>
+              </ul>
+            </div>
+          </div>
+          </a>
+        </div>
+        <hr>
+
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label><span class="text-danger">*</span> Nome</label>
+            <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome Completo">
+          </div>
+          <div class="col-md-6">
+            <label><span class="text-danger">*</span> E-mail</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Seu melhor e-mail">
+          </div>
+          <div class="col-md-6">
+            <label>Senha</label>
+            <input name="senha" type="password" class="form-control" id="senha"
+              placeholder="Senha com minimo de 6 caracteres">
+          </div>
+          <div class="col-md-6">
+            <label>Confirmar Senha</label>
+            <input name="conf_senha" type="password" class="form-control" id="conf_senha" placeholder="Confirmar Senha">
+          </div>
+          <div class="col-6">
+            <label>Endereço</label>
+            <input name="endereco" type="text" class="form-control" id="endereco" placeholder="1234 Milano, Lombardia">
+          </div>
+          <div class="col-2">
+            <label>Numero</label>
+            <input name="numero" type="text" class="form-control" id="numero" placeholder="1 2 3">
+          </div>
+          <div class="col-4">
+            <label>Complemento</label>
+            <input name="complemento" type="text" class="form-control" id="complemento"
+              placeholder="Bloco-Apt-Conjunto">
+          </div>
+          <div class="col-md-6">
+            <label>Cidade</label>
+            <select name="cidade" id="cidade" class="form-select">
+              <option selected>Selecione...</option>
+              <option>Maceio</option>
+              <option>Salvador</option>
+              <option>Fortaleza</option>
+              <option>Sao luis</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label>Estado</label>
+            <select name="estado" id="estado" class="form-select">
+              <option selected>Selecione...</option>
+              <option>Alagoas</option>
+              <option>Bahia</option>
+              <option>Ceara</option>
+              <option>Maranhao</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label>CEP</label>
+            <input name="cep" type="text" class="form-control" id="cep" placeholder="0000-0000">
+          </div>
+          <div class="col-12">
+            <label>Exemplo1</label>
+            <input type="text" class="form-control" id="exemplo1" placeholder="Exemplo 1">
+            </label>
+          </div>
+          <div class="col-12">
+            <p>
+              <span class="text-danger">*</span> Campo Obrigatorio.
+            </p>
+            <button type="submit" class="btn btn-warning">Editar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal fade" id="apagarRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="apagarRegistroLabel">Excluir item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Tem certeza que deseja excluir o item selecionado?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar atualizaçoes</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="jspersonal/dashboard.js"></script>
+
+
+
+</body>
+
+</html>

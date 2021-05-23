@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <script defer src="jspersonal/all.min.js"></script>
+
+
+  <title>dashboard</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="sidebar-toggle text-light me-3">
+      <div class="toggle" onclick="toggleMenu();">
+        <span class="toggled"><i class="fas fa-bars"></i></span>
+      </div>
+
+      <a class="navbar-brand" href="index.html">Roberto</a>
+
+      <div class="collapse navbar-collapse ">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDarkDropdownMenuLink"
+              data-bs-toggle="dropdown">
+              <img class="rounded-circle" src="imagens/logo_e_corsi.png" width="20" height="20" alt="imagem">
+              &nbsp;<span class="d-none d-sm-inline">User</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Perfil</a></li>
+              <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+  <div class="d-flex bd-highlight">
+    <nav class="sidebar">
+      <ul class="list-unstyled">
+        <li> <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li>
+          <a href="#submenu1" data-bs-toggle="collapse">
+            <i class="fas fa-user"></i> Usuario
+          </a>
+          <ul class="list-unstyled collapse" id="submenu1">
+            <li><a href="listar.html"><i class="fas fa-users"></i> Usuarios</a></li>
+            <li class="active"><a href="#"><i class="fas fa-key"></i> Nivel de acesso</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#submenu2" data-bs-toggle="collapse">
+            <i class="fas fa-list-ul"></i> Menu
+          </a>
+          <ul class="list-unstyled collapse" id="submenu2">
+            <li><a href="#"><i class="fas fa-file-alt"></i> Paginas</a></li>
+            <li><a href="#"><i class="fab fa-elementor"></i> Item Menu</a></li>
+          </ul>
+        </li>
+        <li> <a href="#">Item 1</a></li>
+        <li> <a href="#">Item 2</a></li>
+        <li class="active"><a href="#">Item 3</a></li>
+        <li> <a href="#">Item 4</a></li>
+        <li> <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+      </ul>
+    </nav>
+    <div class="content p-1">
+      <div class="list-group-item">
+        <div class="d-flex">
+          <div class="me-auto p-2">
+            <h2 class="display-4 titulo">Listar Usuarios</h2>
+          </div>
+          <a href="cadastrar.html">
+            <div class="p-2">
+              <button class="btn btn-outline-success btn-sm">
+                Cadastrar
+              </button>
+            </div>
+          </a>
+        </div>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          Usuario apagado com Sucesso!
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover table-striped ">
+            <thead>
+              <tr>
+                <th class="d-none d-sm-table-cell">id</th>
+                <th>Nome</th>
+                <th class="d-none d-sm-table-cell">E-mail</th>
+                <th class="d-none d-lg-table-cell">Data de cadastro</th>
+                <th class="text-center">Açoes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="d-none d-sm-table-cell">1</th>
+                <td>Roberto</td>
+                <td class="d-none d-sm-table-cell">beto-cardan@hotmail.com</td>
+                <td class="d-none d-lg-table-cell">23-06-2020</td>
+                <td class="text-center">
+                  <span class="d-none d-md-block">
+                    <a href="visualizar.html" type="button" class="btn btn-outline-primary btn-sm ">Visualizar
+                    </a>
+                    <a href="editar.html" type="button" class="btn btn-outline-success btn-sm ">Editar
+                    </a>
+                    <a href="apagar.html" type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal"
+                      data-bs-target="#apagarRegistro">Apagar
+                    </a>
+                  </span>
+                  <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Açoes
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="acoesListar">
+                      <li><a class="dropdown-item" href="visualizar.html">Visualizar</a></li>
+                      <li><a class="dropdown-item" href="editar.html">Editar</a></li>
+                      <li><a class="dropdown-item" href="apagar.html" data-bs-toggle="modal"
+                          data-bs-target="#apagarRegistro">Apagar</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="d-none d-sm-table-cell">2</th>
+                <td>Marco</td>
+                <td class="d-none d-sm-table-cell">marco-cardan@hotmail.com</td>
+                <td class="d-none d-lg-table-cell">25-05-2021</td>
+                <td class="text-center">
+                  <span class="d-none d-md-block">
+                    <a href="visualizar.html" type="button" class="btn btn-outline-primary btn-sm">Visualizar
+                    </a>
+                    <a href="editar.html" type="button" class="btn btn-outline-success btn-sm ">Editar
+                    </a>
+                    <a href="apagar.html" type="button" class="btn btn-outline-warning btn-sm " data-bs-toggle="modal"
+                      data-bs-target="#apagarRegistro">Apagar
+                    </a>
+                  </span>
+                  <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Açoes
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="acoesListar">
+                      <li><a class="dropdown-item" href="visualizar.html">Visualizar</a></li>
+                      <li><a class="dropdown-item" href="editar.html">Editar</a></li>
+                      <li><a class="dropdown-item" href="apagar.html" data-bs-toggle="modal"
+                          data-bs-target="#apagarRegistro">Apagar</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="d-none d-sm-table-cell">3</th>
+                <td>Larry </td>
+                <td class="d-none d-sm-table-cell">larry@burn.com</td>
+                <td class="d-none d-lg-table-cell">02-11-2020</td>
+                <td class="text-center">
+                  <span class="d-none d-md-block">
+                    <a href="visualizar.html" type="button" class="btn btn-outline-primary btn-sm ">Visualizar
+                    </a>
+                    <a href="editar.html" type="button" class="btn btn-outline-success btn-sm ">Editar
+                    </a>
+                    <a href="apagar.html" type="button" class="btn btn-outline-warning btn-sm" data-bs-toggle="modal"
+                      data-bs-target="#apagarRegistro">Apagar
+                    </a>
+                  </span>
+                  <div class="dropdown d-block d-md-none">
+                    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Açoes
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="acoesListar">
+                      <li><a class="dropdown-item" href="visualizar.html">Visualizar</a></li>
+                      <li><a class="dropdown-item" href="editar.html">Editar</a></li>
+                      <li><a class="dropdown-item" href="apagar.html" data-bs-toggle="modal"
+                          data-bs-target="#apagarRegistro">Apagar</a></li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <nav aria-label="paginacao">
+            <ul class="pagination pagination-sm justify-content-center">
+              <li class="page-item disabled">
+                <span class="page-link">Primeira</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">3</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+
+              <li class="page-item">
+                <a class="page-link" href="#">Ultima</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="apagarRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="apagarRegistroLabel">Excluir item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Tem certeza que deseja excluir o item selecionado?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary">Salvar atualizaçoes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="jspersonal/dashboard.js"></script>
+
+
+
+</body>
+
+</html>

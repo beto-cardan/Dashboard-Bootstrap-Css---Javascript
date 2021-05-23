@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <script defer src="jspersonal/all.min.js"></script>
+  <script defer src="jspersonal/dashboard.js"></script>
+
+
+  <title>dashboard</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="sidebar-toggle text-light me-3">
+      <div class="toggle" onclick="toggleMenu();">
+        <span class="toggled"><i class="fas fa-bars"></i></span>
+        
+      </div>
+
+      <a class="navbar-brand" href="index.html"></a>
+
+      <div class="collapse navbar-collapse ">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDarkDropdownMenuLink"
+              data-bs-toggle="dropdown">
+              <img class="rounded-circle" src="imagens/logo_e_corsi.png" width="20" height="20" alt="imagem">
+              &nbsp;<span class="d-none d-sm-inline">User</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Perfil</a></li>
+              <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+  <div class="d-flex bd-highlight">
+    <nav class="sidebar">
+      <ul class="list-unstyled">
+        <li> <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li>
+          <a href="#submenu1" data-bs-toggle="collapse">
+            <i class="fas fa-user"></i> Usuario
+          </a>
+          <ul class="list-unstyled collapse" id="submenu1">
+            <li><a href="listar.html"><i class="fas fa-users"></i> Usuarios</a></li>
+            <li class="active"><a href="#"><i class="fas fa-key"></i> Nivel de acesso</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#submenu2" data-bs-toggle="collapse">
+            <i class="fas fa-list-ul"></i> Menu
+          </a>
+          <ul class="list-unstyled collapse" id="submenu2">
+            <li><a href="#"><i class="fas fa-file-alt"></i> Paginas</a></li>
+            <li><a href="#"><i class="fab fa-elementor"></i> Item Menu</a></li>
+          </ul>
+        </li>
+        <li> <a href="#">Item 1</a></li>
+        <li> <a href="#">Item 2</a></li>
+        <li class="active"><a href="#">Item 3</a></li>
+        <li> <a href="#">Item 4</a></li>
+        <li> <a href="login.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+      </ul>
+    </nav>
+    <div class="content p-1">
+      <div class="list-group-item">
+        <div class="d-flex">
+          <div class="me-auto p-2">
+            <h2 class="display-4 titulo">Dashboard</h2>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2  g-2">
+            <div class="col">
+              <div class="card h-100 bg-primary text-white">
+                <div class="card-body">
+                  <i class="fas fa-users fa-3x"></i>
+                  <h6 class="card-title">Usuarios</h6>
+                  <h2 class="lead"> 340</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 bg-success text-white">
+                <div class="card-body">
+                  <i class="fas fa-file-alt fa-3x"></i>
+                  <h6 class="card-title">Artigos</h6>
+                  <h2 class="lead">45</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 bg-warning text-white">
+                <div class="card-body">
+                  <i class="fas fa-eye fa-3x"></i>
+                  <h6 class="card-title">Visitas</h6>
+                  <h2 class="lead">344</h2>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 bg-danger text-white">
+                <div class="card-body ">
+                  <i class="far fa-comment fa-3x"></i>
+                  <h6 class="card-title">Comentarios</h6>
+                  <h2 class="lead">122</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="res"></div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+
+
+
+</body>
+
+</html>
